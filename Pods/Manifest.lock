@@ -1,0 +1,26 @@
+PODS:
+  - JSONModel (1.7.0)
+  - Masonry (1.0.2)
+  - MJRefresh (3.1.12)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - YYText (1.0.7)
+
+DEPENDENCIES:
+  - JSONModel
+  - Masonry
+  - MJRefresh
+  - SDWebImage
+  - YYText
+
+SPEC CHECKSUMS:
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
+  MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
+
+PODFILE CHECKSUM: 7fce193a5a9c1dc060a2b41ab55f2c315a17da7b
+
+COCOAPODS: 1.1.1
