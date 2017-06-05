@@ -38,6 +38,7 @@
 #pragma mark --------------------private-------------------------
 
 - (void)initData{
+    
     _text = [[NSAttributedString alloc]initWithString:@"你所说的     计时定时；点击；案件大家；的；爱打架；adjacent；点击；大家都来；爱神的箭卡；来得及啊；的；大奖拿大炮假的少那肯定卡刘德华；"];
     __weak typeof(self) _self = self;
     YYTextHighlight *hi = [YYTextHighlight new];
@@ -61,13 +62,13 @@
 }
 - (void)initView{
     
-    
+    [super initView];
     _label = [YYLabel new];
     _label.font = [UIFont systemFontOfSize:16];
     _label.userInteractionEnabled = YES;
     _label.numberOfLines = 0;
     _label.textVerticalAlignment = YYTextVerticalAlignmentTop;
-    _label.frame = CGRectMake(50, 100, 200, 38);
+    _label.frame = CGRectMake(50, 200, 200, 38);
     _label.attributedText = _text;
     [self addSeeMoreButton];
     [self.view addSubview:_label];

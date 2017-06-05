@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface BasicViewController : UIViewController
-
+- (void)initView;
 @end
