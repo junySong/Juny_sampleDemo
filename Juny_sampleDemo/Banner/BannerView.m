@@ -24,7 +24,7 @@
     return  self;
 }
 - (void)initData{
-    WS(weakSelf);
+
     _dataArray = [NSMutableArray array];
     _defaultImage = [UIImage imageNamed:@"huanchong_bj"];
     
@@ -39,7 +39,7 @@
     _scrollView.scrollsToTop = NO;
     _scrollView.delegate = self;
     
-    _pageControl = [[UIPageControl alloc]init];
+    _pageControl = [[PageControl alloc]init];
     [self addSubview:_pageControl];
     
     _defaultImageView = [[UIImageView alloc]init];

@@ -6,6 +6,8 @@
 //  Copyright © 2017年 Juny. All rights reserved.
 //
 
+#import "BannerViewController.h"
+
 #import <XCTest/XCTest.h>
 
 @interface Juny_sampleDemoUITests : XCTestCase

@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "PageControl.h"
 
 @class BannerView;
 
@@ -24,7 +24,7 @@
 @interface BannerView : UIView<UIScrollViewDelegate>
 
 @property (nonatomic, strong)UIScrollView *scrollView; //滑动视图
-@property (nonatomic, strong)UIPageControl *pageControl; //pageControl
+@property (nonatomic, strong)PageControl *pageControl; //pageControl
 @property (nonatomic, strong)NSMutableArray *dataArray; //数据源
 @property (nonatomic, strong)UIImageView *defaultImageView; //默认的imageView
 @property (nonatomic, strong)UIImage *defaultImage; //
