@@ -1,0 +1,20 @@
+//
+//  Juny_sampDemo.pch
+//  Juny_sampleDemo
+//
+//  Created by JH on 2017/6/7.
+//  Copyright © 2017年 Juny. All rights reserved.
+//
+
+#ifndef Juny_sampDemo_pch
+#define Juny_sampDemo_pch
+
+#import "TLColorMacros.h"
+#import "TLDeviceMacros.h"
+#import "TLFontSizeMacros.h"
+#import "TLLayoutSizeMacros.h"
+#import "TLNotificationMacros.h"
+#import "TLOtherMacros.h"
+
+#endif /* Juny_sampDemo_pch */
+

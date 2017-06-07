@@ -472,6 +472,9 @@
 		E92F5BD51EE0F6E300D4598F /* EntryptViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E92F5BD41EE0F6E300D4598F /* EntryptViewController.m */; };
 		E9634C1C1ED90BC300AC7A0E /* ProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E9634C1B1ED90BC300AC7A0E /* ProductModel.m */; };
 		E9634C1F1ED90C0B00AC7A0E /* OrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E9634C1E1ED90C0B00AC7A0E /* OrderModel.m */; };
+		E973B1991EE7997A00884EA7 /* BannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E973B1981EE7997A00884EA7 /* BannerViewController.m */; };
+		E973B1A41EE7A52900884EA7 /* BannerView.m in Sources */ = {isa = PBXBuildFile; fileRef = E973B1A31EE7A52900884EA7 /* BannerView.m */; };
+		E973B1A61EE7AEB700884EA7 /* huanchong_bj.png in Resources */ = {isa = PBXBuildFile; fileRef = E973B1A51EE7AEB700884EA7 /* huanchong_bj.png */; };
 		E98217B51EDE4FC3006106F1 /* collectionOrderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E98217B41EDE4FC3006106F1 /* collectionOrderModel.m */; };
 		E98217B81EDE56BF006106F1 /* snake_case_orderModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E98217B71EDE56BF006106F1 /* snake_case_orderModel.m */; };
 		E98217BB1EDE58F0006106F1 /* optionProductModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E98217BA1EDE58F0006106F1 /* optionProductModel.m */; };
@@ -1008,6 +1011,18 @@
 		E9634C1B1ED90BC300AC7A0E /* ProductModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductModel.m; sourceTree = "<group>"; };
 		E9634C1D1ED90C0B00AC7A0E /* OrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderModel.h; sourceTree = "<group>"; };
 		E9634C1E1ED90C0B00AC7A0E /* OrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderModel.m; sourceTree = "<group>"; };
+		E973B1971EE7997A00884EA7 /* BannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerViewController.h; sourceTree = "<group>"; };
+		E973B1981EE7997A00884EA7 /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
+		E973B19A1EE79A0300884EA7 /* Juny_sampDemo.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Juny_sampDemo.pch; sourceTree = "<group>"; };
+		E973B19C1EE79C0800884EA7 /* TLColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLColorMacros.h; sourceTree = "<group>"; };
+		E973B19D1EE79C0800884EA7 /* TLDeviceMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLDeviceMacros.h; sourceTree = "<group>"; };
+		E973B19E1EE79C0800884EA7 /* TLFontSizeMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLFontSizeMacros.h; sourceTree = "<group>"; };
+		E973B19F1EE79C0800884EA7 /* TLLayoutSizeMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLLayoutSizeMacros.h; sourceTree = "<group>"; };
+		E973B1A01EE79C0800884EA7 /* TLNotificationMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLNotificationMacros.h; sourceTree = "<group>"; };
+		E973B1A11EE79C0800884EA7 /* TLOtherMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TLOtherMacros.h; sourceTree = "<group>"; };
+		E973B1A21EE7A52900884EA7 /* BannerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView.h; sourceTree = "<group>"; };
+		E973B1A31EE7A52900884EA7 /* BannerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView.m; sourceTree = "<group>"; };
+		E973B1A51EE7AEB700884EA7 /* huanchong_bj.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = huanchong_bj.png; sourceTree = "<group>"; };
 		E98217B31EDE4FC3006106F1 /* collectionOrderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = collectionOrderModel.h; sourceTree = "<group>"; };
 		E98217B41EDE4FC3006106F1 /* collectionOrderModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = collectionOrderModel.m; sourceTree = "<group>"; };
 		E98217B61EDE56BF006106F1 /* snake_case_orderModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = snake_case_orderModel.h; sourceTree = "<group>"; };
@@ -1081,6 +1096,8 @@
 		11D7281C1EC5822D000D0616 /* Juny_sampleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E973B19B1EE79B8F00884EA7 /* Macro */,
+				E973B1961EE7995B00884EA7 /* Banner */,
 				E92F5BD21EE0F6BD00D4598F /* Encrypt */,
 				E98217C61EDE6F4F006106F1 /* YYText */,
 				E98217C21EDE6BD5006106F1 /* JSONModel */,
@@ -1102,6 +1119,7 @@
 				11D728261EC5822E000D0616 /* Main.storyboard */,
 				11D7282C1EC5822E000D0616 /* Assets.xcassets */,
 				11D7282E1EC5822E000D0616 /* LaunchScreen.storyboard */,
+				E973B19A1EE79A0300884EA7 /* Juny_sampDemo.pch */,
 				11D728311EC5822E000D0616 /* Info.plist */,
 				11D728291EC5822E000D0616 /* Juny_sampleDemo.xcdatamodeld */,
 				11D7281D1EC5822D000D0616 /* Supporting Files */,
@@ -1767,6 +1785,31 @@
 			path = Encrypt;
 			sourceTree = "<group>";
 		};
+		E973B1961EE7995B00884EA7 /* Banner */ = {
+			isa = PBXGroup;
+			children = (
+				E973B1A51EE7AEB700884EA7 /* huanchong_bj.png */,
+				E973B1971EE7997A00884EA7 /* BannerViewController.h */,
+				E973B1981EE7997A00884EA7 /* BannerViewController.m */,
+				E973B1A21EE7A52900884EA7 /* BannerView.h */,
+				E973B1A31EE7A52900884EA7 /* BannerView.m */,
+			);
+			path = Banner;
+			sourceTree = "<group>";
+		};
+		E973B19B1EE79B8F00884EA7 /* Macro */ = {
+			isa = PBXGroup;
+			children = (
+				E973B19C1EE79C0800884EA7 /* TLColorMacros.h */,
+				E973B19D1EE79C0800884EA7 /* TLDeviceMacros.h */,
+				E973B19E1EE79C0800884EA7 /* TLFontSizeMacros.h */,
+				E973B19F1EE79C0800884EA7 /* TLLayoutSizeMacros.h */,
+				E973B1A01EE79C0800884EA7 /* TLNotificationMacros.h */,
+				E973B1A11EE79C0800884EA7 /* TLOtherMacros.h */,
+			);
+			path = Macro;
+			sourceTree = "<group>";
+		};
 		E98217C21EDE6BD5006106F1 /* JSONModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -2146,6 +2189,7 @@
 				11D72AF71EC58BFB000D0616 /* loading-2_00106@2x.png in Resources */,
 				11D72A131EC58BFB000D0616 /* loading-2_00013.png in Resources */,
 				11D72B1C1EC58BFB000D0616 /* loading-2_00008@3x.png in Resources */,
+				E973B1A61EE7AEB700884EA7 /* huanchong_bj.png in Resources */,
 				11D72A181EC58BFB000D0616 /* loading-2_00018.png in Resources */,
 				11D72AFF1EC58BFB000D0616 /* loading-2_00114@2x.png in Resources */,
 				11D72A9B1EC58BFB000D0616 /* loading-2_00014@2x.png in Resources */,
@@ -2520,6 +2564,7 @@
 				11D728651EC58853000D0616 /* MJDIYBackFooter.m in Sources */,
 				11D72BFC1EC5BC8A000D0616 /* DeleteCellViewController.m in Sources */,
 				11D728641EC58853000D0616 /* MJDIYAutoFooter.m in Sources */,
+				E973B1991EE7997A00884EA7 /* BannerViewController.m in Sources */,
 				E98217B81EDE56BF006106F1 /* snake_case_orderModel.m in Sources */,
 				11D72BF31EC5B3FD000D0616 /* CoreTextViewController.m in Sources */,
 				11D72BAE1EC59066000D0616 /* UIImage+QRcode.m in Sources */,
@@ -2541,6 +2586,7 @@
 				11D728611EC58853000D0616 /* MJChiBaoZiFooter.m in Sources */,
 				11D72BA51EC58E23000D0616 /* QRcodeAndMatixViewController.m in Sources */,
 				11D7281F1EC5822D000D0616 /* main.m in Sources */,
+				E973B1A41EE7A52900884EA7 /* BannerView.m in Sources */,
 				11D728691EC58890000D0616 /* RefreshViewController.m in Sources */,
 				11D72BA11EC58CCC000D0616 /* BeizierView.m in Sources */,
 				E98217B51EDE4FC3006106F1 /* collectionOrderModel.m in Sources */,
@@ -2697,6 +2743,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Juny_sampleDemo/Juny_sampDemo.pch";
 				INFOPLIST_FILE = Juny_sampleDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2711,6 +2759,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Juny_sampleDemo/Juny_sampDemo.pch";
 				INFOPLIST_FILE = Juny_sampleDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
