@@ -18,6 +18,9 @@
 #import "YYTextViewController.h"
 #import "EntryptViewController.h"
 #import "BannerViewController.h"
+#import "PageViewController.h"
+
+
 #import "ViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -31,7 +34,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _dataSourceArray =  @[@"自定义刷新",@"贝塞尔曲线",@"二维码生成和扫描",@"仿创建一条微博的动画",@"仿格瓦拉转场动画",@"选择照片",@"CoreText",@"删除单元格",@"jsonModel",@"YYText",@"entrypt",@"banner"];
+    _dataSourceArray =  @[@"自定义刷新",@"贝塞尔曲线",@"二维码生成和扫描",@"仿创建一条微博的动画",@"仿格瓦拉转场动画",@"选择照片",@"CoreText",@"删除单元格",@"jsonModel",@"YYText",@"entrypt",@"banner",@"PageController"];
     
 }
 
@@ -161,7 +164,10 @@
 
         case 12://
         {
-            
+            PageViewController *vc = [[PageViewController alloc]init];
+            [self presentViewController:vc animated:YES completion:^{
+                
+            }];
         }
             break;
 

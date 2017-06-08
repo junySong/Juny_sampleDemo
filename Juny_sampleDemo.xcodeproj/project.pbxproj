@@ -486,6 +486,7 @@
 		E98217CC1EDE6FDD006106F1 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98217CB1EDE6FDD006106F1 /* BasicViewController.m */; };
 		E98217D01EDE909F006106F1 /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98217CE1EDE909F006106F1 /* down@2x.png */; };
 		E98217D11EDE909F006106F1 /* up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98217CF1EDE909F006106F1 /* up@2x.png */; };
+		E9CDB69A1EE920B000C3D23D /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CDB6991EE920B000C3D23D /* PageViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -1044,6 +1045,8 @@
 		E98217CB1EDE6FDD006106F1 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
 		E98217CE1EDE909F006106F1 /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down@2x.png"; sourceTree = "<group>"; };
 		E98217CF1EDE909F006106F1 /* up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up@2x.png"; sourceTree = "<group>"; };
+		E9CDB6981EE920B000C3D23D /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
+		E9CDB6991EE920B000C3D23D /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1099,6 +1102,7 @@
 		11D7281C1EC5822D000D0616 /* Juny_sampleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				E9CDB6971EE9209100C3D23D /* PageVC */,
 				E973B19B1EE79B8F00884EA7 /* Macro */,
 				E973B1961EE7995B00884EA7 /* Banner */,
 				E92F5BD21EE0F6BD00D4598F /* Encrypt */,
@@ -1843,6 +1847,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		E9CDB6971EE9209100C3D23D /* PageVC */ = {
+			isa = PBXGroup;
+			children = (
+				E9CDB6981EE920B000C3D23D /* PageViewController.h */,
+				E9CDB6991EE920B000C3D23D /* PageViewController.m */,
+			);
+			path = PageVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2570,6 +2583,7 @@
 				11D72BFC1EC5BC8A000D0616 /* DeleteCellViewController.m in Sources */,
 				11D728641EC58853000D0616 /* MJDIYAutoFooter.m in Sources */,
 				E973B1991EE7997A00884EA7 /* BannerViewController.m in Sources */,
+				E9CDB69A1EE920B000C3D23D /* PageViewController.m in Sources */,
 				E98217B81EDE56BF006106F1 /* snake_case_orderModel.m in Sources */,
 				11D72BF31EC5B3FD000D0616 /* CoreTextViewController.m in Sources */,
 				11D72BAE1EC59066000D0616 /* UIImage+QRcode.m in Sources */,
