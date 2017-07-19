@@ -39,4 +39,17 @@
     // Use XCTAssert and related functions to verify your tests produce the correct results.
 }
 
+- (void)testUI{
+    
+    
+    XCUIApplication *app = [[XCUIApplication alloc] init];
+    [app.tables.staticTexts[@"UITestVC"] tap];
+    [app.buttons[@"Login"] tap];
+    [app.buttons[@"back"] tap];
+    
+  
+    
+    
+}
+
 @end

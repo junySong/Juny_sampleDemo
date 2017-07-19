@@ -20,6 +20,10 @@
 //    NSString *stringIn = @"{\n\n}";
 //    NSString *stringOut = [self entryptString:stringIn];
 //    NSLog(@"%@",stringOut);
+//    
+//        NSString *stringIn = @"{\n\n}";
+//        NSString *stringOut = [self entryptModString:stringIn];
+//        NSLog(@"%@",stringOut);
     [self testSortDic];
     
     UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 200, 414, 300)];
@@ -37,6 +41,28 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSString *)entryptModString:(NSString *)string{
+    NSString *outPut = @"";
+    if (string)
+    {
+        const char *cStr = [string UTF8String];
+        NSUInteger size = string.length;
+        int m ;
+        unsigned char chars[size];
+        
+        NSMutableString *mutableString = [[NSMutableString alloc]init];
+        for (int i=0; i<size; i++) {
+            m =((int)cStr[i])^256;
+            char n = (char)m;
+            chars[i] = n;
+             printf("%d=%X\n",i,chars[i]);
+        }
+   
+        outPut = [NSString stringWithUTF8String:chars[size]];
+    }
+    return outPut;
 }
 
 - (NSString *)entryptString:(NSString *)string{

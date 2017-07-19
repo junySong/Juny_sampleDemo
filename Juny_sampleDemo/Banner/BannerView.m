@@ -170,8 +170,11 @@
 
 
 - (void)deallocTimer{
-    dispatch_cancel(_timer);
-    _timer = nil;
+    if(_timer){
+        dispatch_cancel(_timer);
+        _timer = nil;
+    }
+   
 }
 
 #pragma mark --------------------click------------------------- 

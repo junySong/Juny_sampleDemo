@@ -104,6 +104,8 @@ UIActionSheetDelegate>
     }];
     
 }
+
+
 //打开相机
 - (void)opneCamera {
     UIImagePickerControllerSourceType sourceType = UIImagePickerControllerSourceTypeCamera;

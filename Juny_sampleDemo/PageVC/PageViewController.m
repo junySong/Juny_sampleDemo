@@ -69,7 +69,7 @@
 }
 
 - (void)initMyView{
-    _pageVC = [[UIPageViewController alloc]initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+    _pageVC = [[UIPageViewController alloc]initWithTransitionStyle:UIPageViewControllerTransitionStylePageCurl navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
     _pageVC.view.frame = CGRectMake(0, 300, SCREEN_WIDTH, SCREEN_HEIGHT-300);
     _pageVC.delegate = self;
     _pageVC.dataSource = self;

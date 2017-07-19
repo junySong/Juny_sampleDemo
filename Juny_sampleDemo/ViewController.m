@@ -19,6 +19,10 @@
 #import "EntryptViewController.h"
 #import "BannerViewController.h"
 #import "PageViewController.h"
+#import "UITestViewController.h"
+#import "ShapeLayerViewController.h"
+#import "RunloopViewController.h"
+#import "WKWebViewController.h"
 
 
 #import "ViewController.h"
@@ -34,10 +38,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _dataSourceArray =  @[@"自定义刷新",@"贝塞尔曲线",@"二维码生成和扫描",@"仿创建一条微博的动画",@"仿格瓦拉转场动画",@"选择照片",@"CoreText",@"删除单元格",@"jsonModel",@"YYText",@"entrypt",@"banner",@"PageController"];
+    _dataSourceArray =  @[@"自定义刷新",@"贝塞尔曲线",@"二维码生成和扫描",@"仿创建一条微博的动画",@"仿格瓦拉转场动画",@"选择照片",@"CoreText",@"删除单元格",@"jsonModel",@"YYText",@"entrypt",@"banner",@"PageController",@"UITestVC",@"ShapeLayer",@"RunLoop",@"WKWebView"];
+
     
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+ 
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -173,15 +187,62 @@
 
         case 13://
         {
-            
+            UITestViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"UITestViewController"];
+            [self presentViewController:vc animated:YES completion:^{
+                
+            }];
         }
             break;
 
-        case 14://
+        case 14://TLCardTicketViewController
+            
+        {
+            ShapeLayerViewController *vc = [[ShapeLayerViewController alloc]init];
+            [self presentViewController:vc animated:NO completion:^{
+                
+            }];
+        }
+            break;
+        case 15://TLCardTicketViewController
+            
+        {
+            RunloopViewController *vc = [[RunloopViewController alloc]init];
+            [self presentViewController:vc animated:NO completion:^{
+                
+            }];
+        }
+            break;
+            
+        case 16://wkwebView
+            
+        {
+            WKWebViewController *vc =[[WKWebViewController alloc]init];
+            vc.urlSring = @"https://www.baidu.com/";
+            [self presentViewController:vc animated:NO completion:^{
+                
+            }];
+
+        }
+            break;
+        case 17://TLCardTicketViewController
+            
         {
             
         }
             break;
+        case 18://TLCardTicketViewController
+            
+        {
+            
+        }
+            break;
+        case 19://TLCardTicketViewController
+            
+        {
+            
+        }
+            break;
+
 
             
         default:

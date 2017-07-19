@@ -31,12 +31,16 @@
 
 - (void)viewWillDisappear:(BOOL)animated{
     [super viewWillDisappear:animated];
-    [_bannerView deallocTimer];
+   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc{
+     [_bannerView deallocTimer];
 }
 
 #pragma mark --------------------private-------------------------
