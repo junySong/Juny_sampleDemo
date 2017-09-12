@@ -23,6 +23,9 @@
     if (_urlSring.length>0) {
         [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_urlSring]]];
     }
+    
+    
+    [self performSelector:@selector(fuction1) withObject:nil afterDelay:2];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -68,6 +71,12 @@
     [self.view addSubview:self.progressView];
     
 
+}
+
+- (void)fuction1{
+ 
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://gist.github.com/cocoajin/9946826"]]];
+   
 }
 
 - (void)addObservers{

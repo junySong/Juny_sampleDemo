@@ -467,6 +467,8 @@
 		11D72BFF1EC5BC91000D0616 /* DeleteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D72BFE1EC5BC91000D0616 /* DeleteTableViewCell.m */; };
 		48B1531A42340D5CDD7FDD0F /* libPods-Juny_sampleDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64013D156B49EE7681FE9C /* libPods-Juny_sampleDemoUITests.a */; };
 		78A35701ADDA0D3DA0207386 /* libPods-Juny_sampleDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C9B091D62DE751581696DC /* libPods-Juny_sampleDemo.a */; };
+		8B5F84691F67803B00452E8C /* BannerView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F84681F67803B00452E8C /* BannerView1.m */; };
+		8BEB308A1F4E7E9700AD1C72 /* RegularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB30891F4E7E9700AD1C72 /* RegularViewController.m */; };
 		AEF53C23D50A8283D0DA0E26 /* libPods-Juny_sampleDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7934E90784ECFF9822822F4 /* libPods-Juny_sampleDemoTests.a */; };
 		E91CD1211F161D9700D74B91 /* ShapeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91CD1201F161D9700D74B91 /* ShapeLayerViewController.m */; };
 		E92088061ED84CE60004FBE3 /* CountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E92088051ED84CE60004FBE3 /* CountryModel.m */; };
@@ -1009,6 +1011,10 @@
 		2FAF665F044D0328598D7129 /* Pods-Juny_sampleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juny_sampleDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Juny_sampleDemo/Pods-Juny_sampleDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		4C771F161E8EFFB48FD9F945 /* Pods-Juny_sampleDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juny_sampleDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Juny_sampleDemoUITests/Pods-Juny_sampleDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B64013D156B49EE7681FE9C /* libPods-Juny_sampleDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Juny_sampleDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B5F84671F67803B00452E8C /* BannerView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView1.h; sourceTree = "<group>"; };
+		8B5F84681F67803B00452E8C /* BannerView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView1.m; sourceTree = "<group>"; };
+		8BEB30881F4E7E9700AD1C72 /* RegularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularViewController.h; sourceTree = "<group>"; };
+		8BEB30891F4E7E9700AD1C72 /* RegularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularViewController.m; sourceTree = "<group>"; };
 		A0C9B091D62DE751581696DC /* libPods-Juny_sampleDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Juny_sampleDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A65EC6A9F3259449678B039E /* Pods-Juny_sampleDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juny_sampleDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Juny_sampleDemoTests/Pods-Juny_sampleDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B7934E90784ECFF9822822F4 /* libPods-Juny_sampleDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Juny_sampleDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1123,6 +1129,7 @@
 		11D7281C1EC5822D000D0616 /* Juny_sampleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8BEB30871F4E7E7F00AD1C72 /* Regular */,
 				E9C73DD21F1E080000A5C24E /* WKWebView */,
 				E964B8311F173D00005DC67C /* RunLoop */,
 				E91CD11E1F161D7700D74B91 /* CAShapeLayer */,
@@ -1775,6 +1782,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8BEB30871F4E7E7F00AD1C72 /* Regular */ = {
+			isa = PBXGroup;
+			children = (
+				8BEB30881F4E7E9700AD1C72 /* RegularViewController.h */,
+				8BEB30891F4E7E9700AD1C72 /* RegularViewController.m */,
+			);
+			path = Regular;
+			sourceTree = "<group>";
+		};
 		CB850FB1AF745E65BC71469C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1859,6 +1875,8 @@
 				E973B1A31EE7A52900884EA7 /* BannerView.m */,
 				E973B1A71EE7F77200884EA7 /* PageControl.h */,
 				E973B1A81EE7F77200884EA7 /* PageControl.m */,
+				8B5F84671F67803B00452E8C /* BannerView1.h */,
+				8B5F84681F67803B00452E8C /* BannerView1.m */,
 			);
 			path = Banner;
 			sourceTree = "<group>";
@@ -1998,7 +2016,7 @@
 				TargetAttributes = {
 					11D728191EC5822D000D0616 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = XDUE8B6CNL;
+						DevelopmentTeam = PA2V7TLZSR;
 						ProvisioningStyle = Automatic;
 					};
 					11D728351EC5822E000D0616 = {
@@ -2635,6 +2653,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11D728661EC58853000D0616 /* MJDIYHeader.m in Sources */,
+				8B5F84691F67803B00452E8C /* BannerView1.m in Sources */,
 				11D72BE31EC5A315000D0616 /* RootViewController.m in Sources */,
 				E92F5BD51EE0F6E300D4598F /* EntryptViewController.m in Sources */,
 				E98217C51EDE6BFE006106F1 /* JSONModelViewController.m in Sources */,
@@ -2659,6 +2678,7 @@
 				11D72BEB1EC5A511000D0616 /* TrasitionViewController.m in Sources */,
 				11D72BFF1EC5BC91000D0616 /* DeleteTableViewCell.m in Sources */,
 				E9C73DD51F1E083C00A5C24E /* WKWebViewController.m in Sources */,
+				8BEB308A1F4E7E9700AD1C72 /* RegularViewController.m in Sources */,
 				11D728251EC5822D000D0616 /* ViewController.m in Sources */,
 				E98217C91EDE6F68006106F1 /* YYTextViewController.m in Sources */,
 				E964B8341F174409005DC67C /* RunloopViewController.m in Sources */,
@@ -2835,7 +2855,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XDUE8B6CNL;
+				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Juny_sampleDemo/Juny_sampDemo.pch";
 				INFOPLIST_FILE = Juny_sampleDemo/Info.plist;
@@ -2853,7 +2873,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = XDUE8B6CNL;
+				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Juny_sampleDemo/Juny_sampDemo.pch";
 				INFOPLIST_FILE = Juny_sampleDemo/Info.plist;

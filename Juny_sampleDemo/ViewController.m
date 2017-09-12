@@ -23,6 +23,7 @@
 #import "ShapeLayerViewController.h"
 #import "RunloopViewController.h"
 #import "WKWebViewController.h"
+#import "RegularViewController.h"
 
 
 #import "ViewController.h"
@@ -30,6 +31,7 @@
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong)NSArray *dataSourceArray;
 @property (weak, nonatomic) IBOutlet UITableView *tableVeiw;
+@property (nonatomic, strong) UIActivityIndicatorView *testActivityIndicator;
 
 @end
 
@@ -38,9 +40,35 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _dataSourceArray =  @[@"自定义刷新",@"贝塞尔曲线",@"二维码生成和扫描",@"仿创建一条微博的动画",@"仿格瓦拉转场动画",@"选择照片",@"CoreText",@"删除单元格",@"jsonModel",@"YYText",@"entrypt",@"banner",@"PageController",@"UITestVC",@"ShapeLayer",@"RunLoop",@"WKWebView"];
-
+    _dataSourceArray =  @[@"自定义刷新",@"贝塞尔曲线",@"二维码生成和扫描",@"仿创建一条微博的动画",@"仿格瓦拉转场动画",@"选择照片",@"CoreText",@"删除单元格",@"jsonModel",@"YYText",@"entrypt",@"banner",@"PageController",@"UITestVC",@"ShapeLayer",@"RunLoop",@"WKWebView",@"正则校验"];
+    [self performSelector:@selector(fuction1) withObject:nil afterDelay:3];
     
+}
+
+- (void)fuction1{
+    
+//    [_testActivityIndicator stopAnimating];
+//    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"确认支付" message:@"请确认是否使用账户余额支付该课程，支付成功后即刻观看本课程内所有视频哦 ~" preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//        
+//    }];
+//    UIAlertAction *sureAction = [UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+//        
+//    }];
+//    
+//    
+//    [alertController addAction:cancelAction];
+//    [alertController addAction:sureAction];
+//    
+//    [self presentViewController:alertController animated:YES completion:^{
+//        
+//    }];
+
+}
+
+- (void)fuction2{
+//    _testActivityIndicator.hidden = NO;
+    [_testActivityIndicator startAnimating];
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -227,7 +255,12 @@
         case 17://TLCardTicketViewController
             
         {
-            
+            RegularViewController *vc =[self.storyboard instantiateViewControllerWithIdentifier:@"RegularViewController"];
+        
+            [self presentViewController:vc animated:NO completion:^{
+                
+            }];
+
         }
             break;
         case 18://TLCardTicketViewController
