@@ -6,9 +6,9 @@
 //  Copyright © 2017年 Juny. All rights reserved.
 //
 
-#import "BasicViewController.h"
 
-@interface WKWebViewController : BasicViewController
+
+@interface WKWebViewController : UIViewController
 @property (nonatomic, copy) NSString *urlSring; //
 
 @end

@@ -24,6 +24,8 @@
 #import "RunloopViewController.h"
 #import "WKWebViewController.h"
 #import "RegularViewController.h"
+#import "CirclePersentViewController.h"
+#import "Juny_sampleDemo-Swift.h"
 
 
 #import "ViewController.h"
@@ -40,7 +42,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    _dataSourceArray =  @[@"自定义刷新",@"贝塞尔曲线",@"二维码生成和扫描",@"仿创建一条微博的动画",@"仿格瓦拉转场动画",@"选择照片",@"CoreText",@"删除单元格",@"jsonModel",@"YYText",@"entrypt",@"banner",@"PageController",@"UITestVC",@"ShapeLayer",@"RunLoop",@"WKWebView",@"正则校验"];
+    _dataSourceArray =  @[@"自定义刷新",@"贝塞尔曲线",@"二维码生成和扫描",@"仿创建一条微博的动画",@"仿格瓦拉转场动画",@"选择照片",@"CoreText",@"删除单元格",@"jsonModel",@"YYText",@"entrypt",@"banner",@"PageController",@"UITestVC",@"ShapeLayer",@"RunLoop",@"WKWebView",@"正则校验",@"CirclePercent",@"swift"];
     [self performSelector:@selector(fuction1) withObject:nil afterDelay:3];
     
 }
@@ -245,7 +247,9 @@
             
         {
             WKWebViewController *vc =[[WKWebViewController alloc]init];
-            vc.urlSring = @"https://www.baidu.com/";
+//            vc.urlSring = @"https://www.baidu.com/";
+            vc.urlSring = @"https://10086.online-cmcc.cn:20010/gfms/11/leaveMessage/index.html?mtitle=%E5%92%8C%E5%A4%9A%E5%8F%B7&stitle=%E4%B8%80%E5%8D%A1%E5%A4%9A%E5%8F%B7%20%E5%9C%A8%E7%BA%BF%E5%8A%9E%E7%90%86%20%E5%91%8A%E5%88%AB%E7%83%A6%E6%89%B0&hasBtn=1&page_Id=10086app_hdh_leave";
+            
             [self presentViewController:vc animated:NO completion:^{
                 
             }];
@@ -266,13 +270,20 @@
         case 18://TLCardTicketViewController
             
         {
+            CirclePersentViewController *vc = [[CirclePersentViewController alloc]init];
+            [self presentViewController:vc animated:NO completion:^{
+                
+            }];
             
         }
             break;
         case 19://TLCardTicketViewController
             
         {
-            
+            SwiftViewController *vc = [[SwiftViewController alloc]init];
+            [self presentViewController:vc animated:NO completion:^{
+                
+            }];
         }
             break;
 

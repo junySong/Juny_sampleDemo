@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="screen-orientation" content="portrait">
+        <meta name="full-screen" content="yes">
+        <meta name="browsermode" content="application">
+        <meta name="x5-orientation" content="portrait">
+        <meta name="x5-fullscreen" content="true">
+        <meta name="x5-page-mode" content="app">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui">
+        <meta name="format-detection" content="telephone=no">
+        <meta http-equiv="x-rim-auto-match" content="none">
+    </head>
+    <body>
+        <a href="javaScript:sendApp();">sendApp</a>
+        <p id="apprequest">还未调用js方法</p>
+        <script type="text/javascript">
+            var browser = {
+                versions: function () {
+                    var u = navigator.userAgent;
+                    return { //移动终端浏览器版本信息
+                        ios: !!u.match(/\(i[^;]+;(U;)? CPU.+Mac OS X/), //ios终端
+                        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或uc浏览器
+                        iPhone: u.indexOf('iPhone') > -1, //是否为iPhone或者QQHD浏览器
+                        iPad: u.indexOf('iPad') > -1, //是否iPad
+                    };
+                }()
+            };
+            function appJsSDK(fn, error) {
+                try {
+                    if (browser.versions.ios) {
+                        fn && fn(window.webkit.messageHandlers,'ios');
+                    }
+                    if (browser.versions.android) {
+                        fn && fn(window.Android,'android');
+                    }
+                } catch (e) {
+                    error && error(e);
+                }
+            }
+            function sendApp() {
+                appJsSDK(function (port, type) {
+                    var message = "{'a':'1','b':'2'}"
+                    if(type == 'ios'){
+                        port.fuction1.postMessage(message);
+                    }else if(type == 'android'){
+                        port.fuction1(message);
+                    }
+                }, function (error) {
+                    alert(error)
+                })
+            }
+            function appRequest(message) {
+                if(typeof(message) == 'object'){
+                    message = JSON.stringify(message)
+                }
+                document.getElementById('apprequest').innerText = '收到来自APP信息' + message
+            }
+        </script>
+    </body>
+</html>

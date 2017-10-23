@@ -467,7 +467,13 @@
 		11D72BFF1EC5BC91000D0616 /* DeleteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 11D72BFE1EC5BC91000D0616 /* DeleteTableViewCell.m */; };
 		48B1531A42340D5CDD7FDD0F /* libPods-Juny_sampleDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B64013D156B49EE7681FE9C /* libPods-Juny_sampleDemoUITests.a */; };
 		78A35701ADDA0D3DA0207386 /* libPods-Juny_sampleDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A0C9B091D62DE751581696DC /* libPods-Juny_sampleDemo.a */; };
+		8B38114C1F9D7BFC00C008AB /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B38114B1F9D7BFC00C008AB /* CircleProgressView.swift */; };
 		8B5F84691F67803B00452E8C /* BannerView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B5F84681F67803B00452E8C /* BannerView1.m */; };
+		8B679A7D1F96F5D70025302B /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B679A7A1F96F5D70025302B /* test.html */; };
+		8B679A7E1F96F5D70025302B /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B679A7C1F96F5D70025302B /* WKWebViewController.m */; };
+		8BA819A71F989D7900A9BAF9 /* SWGJprogress.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA819A31F989D7900A9BAF9 /* SWGJprogress.m */; };
+		8BA819AB1F989F2400A9BAF9 /* CirclePersentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA819AA1F989F2400A9BAF9 /* CirclePersentViewController.m */; };
+		8BD00C131F9CC4CD00633336 /* SwiftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BD00C121F9CC4CD00633336 /* SwiftViewController.swift */; };
 		8BEB308A1F4E7E9700AD1C72 /* RegularViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BEB30891F4E7E9700AD1C72 /* RegularViewController.m */; };
 		AEF53C23D50A8283D0DA0E26 /* libPods-Juny_sampleDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7934E90784ECFF9822822F4 /* libPods-Juny_sampleDemoTests.a */; };
 		E91CD1211F161D9700D74B91 /* ShapeLayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E91CD1201F161D9700D74B91 /* ShapeLayerViewController.m */; };
@@ -493,7 +499,6 @@
 		E98217CC1EDE6FDD006106F1 /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E98217CB1EDE6FDD006106F1 /* BasicViewController.m */; };
 		E98217D01EDE909F006106F1 /* down@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98217CE1EDE909F006106F1 /* down@2x.png */; };
 		E98217D11EDE909F006106F1 /* up@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E98217CF1EDE909F006106F1 /* up@2x.png */; };
-		E9C73DD51F1E083C00A5C24E /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C73DD41F1E083C00A5C24E /* WKWebViewController.m */; };
 		E9C73DD71F1E08CD00A5C24E /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9C73DD61F1E08CD00A5C24E /* WebKit.framework */; };
 		E9CDB69A1EE920B000C3D23D /* PageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E9CDB6991EE920B000C3D23D /* PageViewController.m */; };
 /* End PBXBuildFile section */
@@ -1011,8 +1016,18 @@
 		2FAF665F044D0328598D7129 /* Pods-Juny_sampleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juny_sampleDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Juny_sampleDemo/Pods-Juny_sampleDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		4C771F161E8EFFB48FD9F945 /* Pods-Juny_sampleDemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Juny_sampleDemoUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Juny_sampleDemoUITests/Pods-Juny_sampleDemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B64013D156B49EE7681FE9C /* libPods-Juny_sampleDemoUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Juny_sampleDemoUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B38114B1F9D7BFC00C008AB /* CircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
 		8B5F84671F67803B00452E8C /* BannerView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BannerView1.h; sourceTree = "<group>"; };
 		8B5F84681F67803B00452E8C /* BannerView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerView1.m; sourceTree = "<group>"; };
+		8B679A7A1F96F5D70025302B /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		8B679A7B1F96F5D70025302B /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		8B679A7C1F96F5D70025302B /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		8BA819A21F989D7900A9BAF9 /* SWGJprogress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWGJprogress.h; sourceTree = "<group>"; };
+		8BA819A31F989D7900A9BAF9 /* SWGJprogress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWGJprogress.m; sourceTree = "<group>"; };
+		8BA819A91F989F2400A9BAF9 /* CirclePersentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CirclePersentViewController.h; path = Juny_sampleDemo/cireclePercent/CirclePersentViewController.h; sourceTree = SOURCE_ROOT; };
+		8BA819AA1F989F2400A9BAF9 /* CirclePersentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CirclePersentViewController.m; path = Juny_sampleDemo/cireclePercent/CirclePersentViewController.m; sourceTree = SOURCE_ROOT; };
+		8BD00C111F9CC4CD00633336 /* Juny_sampleDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Juny_sampleDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		8BD00C121F9CC4CD00633336 /* SwiftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftViewController.swift; sourceTree = "<group>"; };
 		8BEB30881F4E7E9700AD1C72 /* RegularViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegularViewController.h; sourceTree = "<group>"; };
 		8BEB30891F4E7E9700AD1C72 /* RegularViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegularViewController.m; sourceTree = "<group>"; };
 		A0C9B091D62DE751581696DC /* libPods-Juny_sampleDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Juny_sampleDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1068,8 +1083,6 @@
 		E98217CB1EDE6FDD006106F1 /* BasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
 		E98217CE1EDE909F006106F1 /* down@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "down@2x.png"; sourceTree = "<group>"; };
 		E98217CF1EDE909F006106F1 /* up@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "up@2x.png"; sourceTree = "<group>"; };
-		E9C73DD31F1E083C00A5C24E /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
-		E9C73DD41F1E083C00A5C24E /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 		E9C73DD61F1E08CD00A5C24E /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E9CDB6981EE920B000C3D23D /* PageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PageViewController.h; sourceTree = "<group>"; };
 		E9CDB6991EE920B000C3D23D /* PageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PageViewController.m; sourceTree = "<group>"; };
@@ -1129,8 +1142,10 @@
 		11D7281C1EC5822D000D0616 /* Juny_sampleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8BA8199E1F989D5400A9BAF9 /* cireclePercent */,
+				8B4239161F77603B00804163 /* swift */,
 				8BEB30871F4E7E7F00AD1C72 /* Regular */,
-				E9C73DD21F1E080000A5C24E /* WKWebView */,
+				8B679A791F96F5D70025302B /* WKWebView */,
 				E964B8311F173D00005DC67C /* RunLoop */,
 				E91CD11E1F161D7700D74B91 /* CAShapeLayer */,
 				E94897821EEE8DB000E1B5BC /* UI Tset */,
@@ -1782,6 +1797,45 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		8B4239161F77603B00804163 /* swift */ = {
+			isa = PBXGroup;
+			children = (
+				8BD00C121F9CC4CD00633336 /* SwiftViewController.swift */,
+				8B38114B1F9D7BFC00C008AB /* CircleProgressView.swift */,
+				8BD00C111F9CC4CD00633336 /* Juny_sampleDemo-Bridging-Header.h */,
+			);
+			path = swift;
+			sourceTree = "<group>";
+		};
+		8B679A791F96F5D70025302B /* WKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				8B679A7A1F96F5D70025302B /* test.html */,
+				8B679A7B1F96F5D70025302B /* WKWebViewController.h */,
+				8B679A7C1F96F5D70025302B /* WKWebViewController.m */,
+			);
+			path = WKWebView;
+			sourceTree = "<group>";
+		};
+		8BA8199E1F989D5400A9BAF9 /* cireclePercent */ = {
+			isa = PBXGroup;
+			children = (
+				8BA819A91F989F2400A9BAF9 /* CirclePersentViewController.h */,
+				8BA819AA1F989F2400A9BAF9 /* CirclePersentViewController.m */,
+				8BA8199F1F989D7900A9BAF9 /* Circleprogress */,
+			);
+			path = cireclePercent;
+			sourceTree = "<group>";
+		};
+		8BA8199F1F989D7900A9BAF9 /* Circleprogress */ = {
+			isa = PBXGroup;
+			children = (
+				8BA819A21F989D7900A9BAF9 /* SWGJprogress.h */,
+				8BA819A31F989D7900A9BAF9 /* SWGJprogress.m */,
+			);
+			path = Circleprogress;
+			sourceTree = "<group>";
+		};
 		8BEB30871F4E7E7F00AD1C72 /* Regular */ = {
 			isa = PBXGroup;
 			children = (
@@ -1922,15 +1976,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		E9C73DD21F1E080000A5C24E /* WKWebView */ = {
-			isa = PBXGroup;
-			children = (
-				E9C73DD31F1E083C00A5C24E /* WKWebViewController.h */,
-				E9C73DD41F1E083C00A5C24E /* WKWebViewController.m */,
-			);
-			path = WKWebView;
-			sourceTree = "<group>";
-		};
 		E9CDB6971EE9209100C3D23D /* PageVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -2017,6 +2062,7 @@
 					11D728191EC5822D000D0616 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = PA2V7TLZSR;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					11D728351EC5822E000D0616 = {
@@ -2281,6 +2327,7 @@
 				11D72B861EC58BFB000D0616 /* loading-2_00114@3x.png in Resources */,
 				11D72B761EC58BFB000D0616 /* loading-2_00098@3x.png in Resources */,
 				11D72A4D1EC58BFB000D0616 /* loading-2_00071.png in Resources */,
+				8B679A7D1F96F5D70025302B /* test.html in Resources */,
 				11D72B6E1EC58BFB000D0616 /* loading-2_00090@3x.png in Resources */,
 				11D72B2D1EC58BFB000D0616 /* loading-2_00025@3x.png in Resources */,
 				11D72A1D1EC58BFB000D0616 /* loading-2_00023.png in Resources */,
@@ -2654,6 +2701,7 @@
 			files = (
 				11D728661EC58853000D0616 /* MJDIYHeader.m in Sources */,
 				8B5F84691F67803B00452E8C /* BannerView1.m in Sources */,
+				8B38114C1F9D7BFC00C008AB /* CircleProgressView.swift in Sources */,
 				11D72BE31EC5A315000D0616 /* RootViewController.m in Sources */,
 				E92F5BD51EE0F6E300D4598F /* EntryptViewController.m in Sources */,
 				E98217C51EDE6BFE006106F1 /* JSONModelViewController.m in Sources */,
@@ -2664,6 +2712,7 @@
 				E98217BB1EDE58F0006106F1 /* optionProductModel.m in Sources */,
 				11D72BAC1EC59066000D0616 /* ScanViewController.m in Sources */,
 				E91CD1211F161D9700D74B91 /* ShapeLayerViewController.m in Sources */,
+				8BD00C131F9CC4CD00633336 /* SwiftViewController.swift in Sources */,
 				11D7282B1EC5822E000D0616 /* Juny_sampleDemo.xcdatamodeld in Sources */,
 				11D728651EC58853000D0616 /* MJDIYBackFooter.m in Sources */,
 				11D72BFC1EC5BC8A000D0616 /* DeleteCellViewController.m in Sources */,
@@ -2674,15 +2723,16 @@
 				11D72BF31EC5B3FD000D0616 /* CoreTextViewController.m in Sources */,
 				E94897871EEE8DFB00E1B5BC /* UITestViewController.m in Sources */,
 				11D72BAE1EC59066000D0616 /* UIImage+QRcode.m in Sources */,
+				8BA819A71F989D7900A9BAF9 /* SWGJprogress.m in Sources */,
 				E96FDE941EEFB46E00CE5A51 /* DetailViewController.m in Sources */,
 				11D72BEB1EC5A511000D0616 /* TrasitionViewController.m in Sources */,
 				11D72BFF1EC5BC91000D0616 /* DeleteTableViewCell.m in Sources */,
-				E9C73DD51F1E083C00A5C24E /* WKWebViewController.m in Sources */,
 				8BEB308A1F4E7E9700AD1C72 /* RegularViewController.m in Sources */,
 				11D728251EC5822D000D0616 /* ViewController.m in Sources */,
 				E98217C91EDE6F68006106F1 /* YYTextViewController.m in Sources */,
 				E964B8341F174409005DC67C /* RunloopViewController.m in Sources */,
 				11D72B9E1EC58CAB000D0616 /* BeizierViewController.m in Sources */,
+				8B679A7E1F96F5D70025302B /* WKWebViewController.m in Sources */,
 				E98217BE1EDE61F7006106F1 /* IgnoreModel.m in Sources */,
 				E973B1A91EE7F77200884EA7 /* PageControl.m in Sources */,
 				11D72BE41EC5A315000D0616 /* PushAnimation.m in Sources */,
@@ -2699,6 +2749,7 @@
 				11D72BA51EC58E23000D0616 /* QRcodeAndMatixViewController.m in Sources */,
 				11D7281F1EC5822D000D0616 /* main.m in Sources */,
 				E973B1A41EE7A52900884EA7 /* BannerView.m in Sources */,
+				8BA819AB1F989F2400A9BAF9 /* CirclePersentViewController.m in Sources */,
 				11D728691EC58890000D0616 /* RefreshViewController.m in Sources */,
 				11D72BA11EC58CCC000D0616 /* BeizierView.m in Sources */,
 				E98217B51EDE4FC3006106F1 /* collectionOrderModel.m in Sources */,
@@ -2854,6 +2905,7 @@
 			baseConfigurationReference = 2FAF665F044D0328598D7129 /* Pods-Juny_sampleDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2864,6 +2916,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Juny-sampleDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Juny_sampleDemo/swift/Juny_sampleDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -2872,6 +2927,7 @@
 			baseConfigurationReference = 192AABF090A759F627670A71 /* Pods-Juny_sampleDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2882,6 +2938,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Juny-sampleDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Juny_sampleDemo/swift/Juny_sampleDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -2889,6 +2947,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A65EC6A9F3259449678B039E /* Pods-Juny_sampleDemoTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				INFOPLIST_FILE = Juny_sampleDemoTests/Info.plist;
@@ -2903,6 +2962,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 17EEAC7C0FCBFEC18DFFC4FD /* Pods-Juny_sampleDemoTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				INFOPLIST_FILE = Juny_sampleDemoTests/Info.plist;
@@ -2917,6 +2977,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4C771F161E8EFFB48FD9F945 /* Pods-Juny_sampleDemoUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				INFOPLIST_FILE = Juny_sampleDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -2930,6 +2991,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 009F1F2676E46E3EE14B6CC8 /* Pods-Juny_sampleDemoUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				INFOPLIST_FILE = Juny_sampleDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

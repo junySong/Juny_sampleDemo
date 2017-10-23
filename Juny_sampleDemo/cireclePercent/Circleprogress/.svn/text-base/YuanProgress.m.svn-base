@@ -1,0 +1,47 @@
+//
+//  YuanProgress.m
+//  SWGJ
+//
+//  Created by mingxum on 15-1-13.
+//  Copyright (c) 2015年 mingxum. All rights reserved.
+//
+
+#import "YuanProgress.h"
+
+@implementation YuanProgress
+@synthesize imgV = _imgV;
+@synthesize prograssLabel = _prograssLabel;
+@synthesize  progressNumber = _progressNumber;
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+-(id)initWithFrame:(CGRect)frame{
+    self = [super initWithFrame:frame];
+    if (self) {
+        _imgV = [[UIImageView alloc]initWithFrame:frame];
+        [self addSubview:_imgV];
+        _prograssLabel = [[UILabel alloc]initWithFrame:CGRectMake((frame.size.width-20)/2, (frame.size.height-20)/2, 20, 20)];
+        _prograssLabel.backgroundColor = [UIColor clearColor];
+        _prograssLabel.font = [UIFont fontWithName:@"UniDreamLED" size:14.0];
+//        _prograssLabel.text = [NSString stringWithFormat:@"%@",self.progressNumber];
+        _prograssLabel.textAlignment = NSTextAlignmentCenter;
+        _prograssLabel.textColor = [UIColor whiteColor];
+
+//        [self addSubview:_prograssLabel];
+        
+    }
+    return self;
+}
+-(void)setProgressNumber:(NSString *)progressNumber{
+    _progressNumber = progressNumber;
+    if (_progressNumber) {
+        _imgV.image = [UIImage imageNamed:[NSString stringWithFormat:@"quan%@.png",_progressNumber]];
+    }
+    _prograssLabel.text = [NSString stringWithFormat:@"%@",_progressNumber];
+    
+}
+@end

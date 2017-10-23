@@ -1,0 +1,19 @@
+//
+//  YuanProgress.h
+//  SWGJ
+//
+//  Created by mingxum on 15-1-13.
+//  Copyright (c) 2015年 mingxum. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface YuanProgress : UIView{
+    UIImageView *_imgV;
+    UILabel *_prograssLabel;
+    NSString *_progressNumber;
+}
+@property(nonatomic,strong)UIImageView *imgV;
+@property(nonatomic,strong)UILabel *prograssLabel;
+@property(nonatomic,strong)NSString *progressNumber;
+@end

@@ -75,12 +75,54 @@
 
 - (void)fuction1{
  
-    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://gist.github.com/cocoajin/9946826"]]];
+//    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://gist.github.com/cocoajin/9946826"]]];
+    [self loadLocationURL];
    
 }
 
 - (void)addObservers{
     [self.webView addObserver:self forKeyPath:@"estimatedProgress" options:NSKeyValueObservingOptionNew context:nil];
+}
+
+#pragma mark- ------------------------加载本地H5时会用到------------------------------------
+//将文件copy到tmp目录
+- (NSURL *)fileURLForBuggyWKWebView8:(NSURL *)fileURL {
+    NSError *error = nil;
+    if (!fileURL.fileURL || ![fileURL checkResourceIsReachableAndReturnError:&error]) {
+        return nil;
+    }
+    // Create "/temp/www" directory
+    NSFileManager *fileManager= [NSFileManager defaultManager];
+    NSURL *temDirURL = [[NSURL fileURLWithPath:NSTemporaryDirectory()] URLByAppendingPathComponent:@"www"];
+    [fileManager createDirectoryAtURL:temDirURL withIntermediateDirectories:YES attributes:nil error:&error];
+    
+    NSURL *dstURL = [temDirURL URLByAppendingPathComponent:fileURL.lastPathComponent];
+    // Now copy given file to the temp directory
+    [fileManager removeItemAtURL:dstURL error:&error];
+    [fileManager copyItemAtURL:fileURL toURL:dstURL error:&error];
+    // Files in "/temp/www" load flawlesly :)
+    return dstURL;
+}
+
+- (void)loadLocationURL{
+    //调用逻辑
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"html"];
+    if(path){
+        if ([[UIDevice currentDevice].systemVersion floatValue] >= 9.0) {
+            // iOS9. One year later things are OK.
+            NSURL *fileURL = [NSURL fileURLWithPath:path];
+            [self.webView loadFileURL:fileURL allowingReadAccessToURL:fileURL];
+        } else {
+            // iOS8. Things can be workaround-ed
+            //   Brave people can do just this
+            //   fileURL = try! pathForBuggyWKWebView8(fileURL)
+            //   webView.loadRequest(NSURLRequest(URL: fileURL))
+            
+            NSURL *fileURL = [self fileURLForBuggyWKWebView8:[NSURL fileURLWithPath:path]];
+            NSURLRequest *request = [NSURLRequest requestWithURL:fileURL];
+            [self.webView loadRequest:request];
+        }
+    }
 }
 
 #pragma mark --------------------observerActions------------------------- 

@@ -1,0 +1,157 @@
+//
+//  SWGJprogress.m
+//  SWGJ
+//
+//  Created by mingxum on 14-11-4.
+//  Copyright (c) 2014年 mingxum. All rights reserved.
+//
+
+#import "SWGJprogress.h"
+
+@implementation SWGJprogress
+@synthesize percent;
+@synthesize label = _label;
+/*
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+- (void)drawRect:(CGRect)rect {
+    // Drawing code
+}
+*/
+- (id)init
+{
+    if ((self = [super init]))
+    {
+        [self setup];
+    }
+    
+    return self;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if ((self = [super initWithCoder:aDecoder]))
+    {
+        [self setup];
+    }
+    
+    return self;
+}
+
+- (id)initWithFrame:(CGRect)frame
+{
+    if ((self = [super initWithFrame:frame]))
+    {
+        [self setup];
+    }
+    
+    return self;
+}
+-(void)setup{
+    
+    
+        self.backgroundColor = [UIColor clearColor];
+        _trackLayer = [CAShapeLayer layer];//创建一个track shape layer
+        _trackLayer.frame = self.bounds;
+        
+        
+        _trackLayer.fillColor = [[UIColor clearColor] CGColor];
+        //    _trackLayer.strokeColor = [_strokeColor CGColor];//指定path的渲染颜色
+        _trackLayer.strokeColor = [[UIColor grayColor] CGColor];//指定path的渲染颜色
+//        _trackLayer.strokeColor = [[UIColor whiteColor] CGColor];
+        _trackLayer.opacity = 0.25; //背景同学你就甘心做背景吧，不要太明显了，透明度小一点
+        _trackLayer.lineCap = kCALineCapRound;//指定线的边缘是圆的
+        _trackLayer.lineWidth = PROGRESS_LINE_WIDTH;//线的宽度
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(self.frame.size.width/2, self.frame.size.height/2) radius:(PROGREESS_WIDTH-PROGRESS_LINE_WIDTH)/2 startAngle:degreesToRadians(-90) endAngle:degreesToRadians(270) clockwise:YES];//上面说明过了用来构建圆形
+        _trackLayer.path =[path CGPath];
+        [self.layer addSublayer:_trackLayer];
+    
+        
+        _progressLayer = [CAShapeLayer layer];
+        _progressLayer.frame = self.bounds;
+        
+        _progressLayer.fillColor =  [[UIColor clearColor] CGColor];
+        //    _progressLayer.strokeColor  = [PROCESS_COLOR CGColor];
+        _progressLayer.strokeColor  = [[UIColor orangeColor] CGColor];
+        _progressLayer.lineCap = kCALineCapRound;
+        _progressLayer.lineWidth = PROGRESS_LINE_WIDTH;
+        _progressLayer.path = [path CGPath];
+        _progressLayer.strokeEnd = 0;
+    
+        [self.layer addSublayer:_progressLayer];
+    
+        CALayer *gradientLayer = [CALayer layer];
+        CAGradientLayer *gradientLayer1 =  [CAGradientLayer layer];
+        //    gradientLayer1.frame = CGRectMake(0, 0, self.width/2, self.height);
+        gradientLayer1.frame = CGRectMake(0, 0,( self.bounds.size.width/2), self.bounds.size.height);
+        [gradientLayer1 setColors:[NSArray arrayWithObjects:(id)[[UIColor colorWithHexString:@"#e3a91c"] CGColor],(id)[[UIColor colorWithHexString:@"#d12b2b"] CGColor], nil]];
+        [gradientLayer1 setLocations:@[@0.2,@1.0,@1 ]];
+//    [gradientLayer1 setLocations:@[@0.5,@0.9,@1 ]];
+        [gradientLayer1 setStartPoint:CGPointMake(0.5, 1)];
+        [gradientLayer1 setEndPoint:CGPointMake(0.5, 0)];
+        [gradientLayer addSublayer:gradientLayer1];
+        
+        CAGradientLayer *gradientLayer2 =  [CAGradientLayer layer];
+        [gradientLayer2 setLocations:@[@0.4,@0.8,@1]];
+        gradientLayer2.frame = CGRectMake(self.bounds.size.width/2, 0, self.bounds.size.width/2, self.bounds.size.height);
+        //    [gradientLayer2 setColors:[NSArray arrayWithObjects:(id)[UIColorFromRGB(0xfde802) CGColor],(id)[MAIN_BLUE CGColor], nil]];
+        [gradientLayer2 setColors:[NSArray arrayWithObjects:(id)[[UIColor colorWithHexString:@"#15ac1e"] CGColor],(id)[[UIColor colorWithHexString:@"#e3a91c"] CGColor], nil]];
+//    [gradientLayer2 setLocations:@[@0.1,@0.5,@1]];
+        [gradientLayer2 setStartPoint:CGPointMake(0.5, 0)];
+        [gradientLayer2 setEndPoint:CGPointMake(0.5, 1)];
+        [gradientLayer addSublayer:gradientLayer2];
+    if (IOS_7) {
+        [gradientLayer setMask:_progressLayer]; //用progressLayer来截取渐变层
+    }
+    
+        [self.layer addSublayer:gradientLayer];
+    
+    
+    _label = [[UILabel alloc]initWithFrame:CGRectMake(((self.frame.size.width-PROGREESS_WIDTH)/2.0),((self.frame.size.height-PROGREESS_WIDTH)/2.0), PROGREESS_WIDTH, PROGREESS_WIDTH)];
+    _label.backgroundColor = [UIColor clearColor];
+    _label.font = [UIFont fontWithName:@"UniDreamLED" size:14.0];
+    _label.text = [NSString stringWithFormat:@"%d",self.percent];
+    _label.textAlignment = NSTextAlignmentCenter;
+    _label.textColor = [UIColor whiteColor];
+    [self addSubview:_label];
+    
+//    [_progressLayer addSublayer:gradientLayer];
+    
+//        [self drawTrack];
+  
+}
+
+// Only override drawRect: if you perform custom drawing.
+// An empty implementation adversely affects performance during animation.
+//- (void)drawRect:(CGRect)rect {
+//    // Drawing code
+//    //    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(40, 40) radius:(PROGREESS_WIDTH-PROGRESS_LINE_WIDTH)/2 startAngle:degreesToRadians(-210) endAngle:degreesToRadians(30) clockwise:YES];
+//    
+//
+//    //把path传递給layer，然后layer会处理相应的渲染，整个逻辑和CoreGraph是一致的。
+//        [self drawProgressLayer];
+//}
+//-( void)drawProgressLayer{
+//    UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(40, 40) radius:(PROGREESS_WIDTH-PROGRESS_LINE_WIDTH)/2 startAngle:degreesToRadians(-210) endAngle:degreesToRadians(30) clockwise:YES];//上面说明过了用来构建圆形
+// 
+//    _
+//}
+-(void)setPercent:(NSInteger)percent animated:(BOOL)animated
+{
+    [CATransaction begin];
+    [CATransaction setDisableActions:!animated];
+    [CATransaction setAnimationTimingFunction:[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn]];
+    //    [CATransaction setAnimationDuration:MAIN_SCREEN_ANIMATION_TIME];
+    [CATransaction setAnimationDuration:2];
+    _progressLayer.strokeEnd =(NSInteger) percent /100.0;
+    [CATransaction commit];
+    
+    _percent =(NSInteger) percent;
+    
+     _label.text = [NSString stringWithFormat:@"%d",_percent];
+    
+    
+}
+
+
+@end
